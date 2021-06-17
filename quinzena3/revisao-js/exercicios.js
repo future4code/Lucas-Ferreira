@@ -59,14 +59,29 @@ function retornaExpressoesBooleanas() {
 
   return respostas
 
-  
+
 }
 
 // EXERCÍCIO 07
-function retornaNNumerosPares(n) {}
+function retornaNNumerosPares(n) {
+
+}
 
 // EXERCÍCIO 08
 function checaTriangulo(a, b, c) {
+    if ((a === b) && (a === c) && (b === c)){
+        return 'Equilátero'
+
+  } 
+
+    if ((a === b && a !== c) || (a === c && a !== b) || (c === b && c !== a)) {
+        return 'Isósceles'
+  } 
+
+    if ( !(a === b) && !(a === c) && !(b === c)){
+        return 'Escaleno'
+  }
+
   // return 'Escaleno'
   // return 'Equilátero'
   // return 'Isósceles'
