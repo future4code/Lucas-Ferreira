@@ -1,62 +1,54 @@
 // EXERCÍCIO 01
-function inverteArray(array) {
-
-}
-
+function inverteArray(array) {}
 
 // EXERCÍCIO 02
 function retornaNumerosParesElevadosADois(array) {
-  const numerosElevados = [];
+  const numerosElevados = []
   for (let valor of array) {
     if (valor % 2 === 0) {
-      const elevado = valor * valor;
-      numerosElevados.push(elevado);
+      const elevado = valor * valor
+      numerosElevados.push(elevado)
     }
   }
-  return numerosElevados;
+  return numerosElevados
 }
 
 // EXERCÍCIO 03
 function retornaNumerosPares(array) {
-  const numerosPares = [];
+  const numerosPares = []
   for (let valor of array) {
     if (valor % 2 === 0) {
-      const par = valor;
-      numerosPares.push(par);
+      const par = valor
+      numerosPares.push(par)
     }
   }
-  return numerosPares;
+  return numerosPares
 }
 
 // EXERCÍCIO 04
 function retornaMaiorNumero(array) {
   let numeroMaior = array[0]
-  
-   for( numero of array){
-       if(numero > numeroMaior){
-           numeroMaior = numero
-    } 
-
-   }
-
-   return numeroMaior
-  
+  for (numero of array) {
+    if (numero > numeroMaior) {
+      numeroMaior = numero
+    }
+  }
+  return numeroMaior
 }
 
 // EXERCÍCIO 05
 function retornaQuantidadeElementos(array) {
-  
+    let tamanhoArray = array.length
+
+    return tamanhoArray
+
 }
 
 // EXERCÍCIO 06
-function retornaExpressoesBooleanas() {
-
-}
+function retornaExpressoesBooleanas() {}
 
 // EXERCÍCIO 07
-function retornaNNumerosPares(n) {
-
-}
+function retornaNNumerosPares(n) {}
 
 // EXERCÍCIO 08
 function checaTriangulo(a, b, c) {
@@ -76,19 +68,13 @@ function comparaDoisNumeros(num1, num2) {
 }
 
 // EXERCÍCIO 10
-function segundoMaiorEMenor(array) {
-
-}
+function segundoMaiorEMenor(array) {}
 
 // EXERCÍCIO 11
-function ordenaArray(array) {
-
-}
+function ordenaArray(array) {}
 
 // EXERCÍCIO 12
-function filmeFavorito() {
-
-}
+function filmeFavorito() {}
 
 // EXERCÍCIO 13
 function imprimeChamada() {
@@ -96,61 +82,37 @@ function imprimeChamada() {
 }
 
 // EXERCÍCIO 14
-function criaRetangulo(lado1, lado2) {
-
-}
+function criaRetangulo(lado1, lado2) {}
 
 // EXERCÍCIO 15
-function anonimizaPessoa(pessoa) {
-
-}
+function anonimizaPessoa(pessoa) {}
 
 // EXERCÍCIO 16A
-function maioresDe18(arrayDePessoas) {
-
-}
+function maioresDe18(arrayDePessoas) {}
 
 // EXERCÍCIO 16B
-function menoresDe18(arrayDePessoas) {
-
-}
+function menoresDe18(arrayDePessoas) {}
 
 // EXERCÍCIO 17A
-function multiplicaArrayPor2(array) {
-
-}
+function multiplicaArrayPor2(array) {}
 
 // EXERCÍCIO 17B
-function multiplicaArrayPor2S(array) {
-
-}
+function multiplicaArrayPor2S(array) {}
 
 // EXERCÍCIO 17C
-function verificaParidade(array) {
-
-}
+function verificaParidade(array) {}
 
 // EXERCÍCIO 18A
-function retornaPessoasAutorizadas(pessoas) {
-
-}
+function retornaPessoasAutorizadas(pessoas) {}
 
 // EXERCÍCIO 18B
-function retornaPessoasNaoAutorizadas(pessoas) {
-
-}
+function retornaPessoasNaoAutorizadas(pessoas) {}
 
 // EXERCÍCIO 19A
-function ordenaPorNome(consultasNome) {
-
-}
+function ordenaPorNome(consultasNome) {}
 
 // EXERCÍCIO 19B
-function ordenaPorData(consultasData) {
-
-}
+function ordenaPorData(consultasData) {}
 
 // EXERCÍCIO 20
-function calculaSaldo(contas) {
-
-}
+function calculaSaldo(contas) {}
