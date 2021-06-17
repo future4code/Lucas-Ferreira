@@ -6,33 +6,41 @@ function inverteArray(array) {
 
 // EXERCÍCIO 02
 function retornaNumerosParesElevadosADois(array) {
-  const numerosElevados = []
-  for(let valor of array){
-      if(valor % 2 === 0){
-          const elevado = valor * valor
-          numerosElevados.push(elevado)
-      }
-  }   
-   return numerosElevados
-} 
-
+  const numerosElevados = [];
+  for (let valor of array) {
+    if (valor % 2 === 0) {
+      const elevado = valor * valor;
+      numerosElevados.push(elevado);
+    }
+  }
+  return numerosElevados;
+}
 
 // EXERCÍCIO 03
 function retornaNumerosPares(array) {
-  const numerosPares = []
-  for(let valor of array){
-   if(valor % 2 === 0){
-       const par = valor
-       numerosPares.push(par)
-   } 
-}
-return numerosPares  
- 
+  const numerosPares = [];
+  for (let valor of array) {
+    if (valor % 2 === 0) {
+      const par = valor;
+      numerosPares.push(par);
+    }
+  }
+  return numerosPares;
 }
 
 // EXERCÍCIO 04
 function retornaMaiorNumero(array) {
+  let numeroMaior = array[0]
+  
+   for( numero of array){
+       if(numero > numeroMaior){
+           numeroMaior = numero
+    } 
 
+   }
+
+   return numeroMaior
+  
 }
 
 // EXERCÍCIO 05
