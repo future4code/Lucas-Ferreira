@@ -69,9 +69,9 @@ function retornaNNumerosPares(n) {
 
 // EXERCÍCIO 08
 function checaTriangulo(a, b, c) {
-    if ((a === b) && (a === c) && (b === c)){
+   
+   if ((a === b) && (a === c) && (b === c)){
         return 'Equilátero'
-
   } 
 
     if ((a === b && a !== c) || (a === c && a !== b) || (c === b && c !== a)) {
@@ -82,19 +82,40 @@ function checaTriangulo(a, b, c) {
         return 'Escaleno'
   }
 
-  // return 'Escaleno'
-  // return 'Equilátero'
-  // return 'Isósceles'
 }
 
 // EXERCÍCIO 09
 function comparaDoisNumeros(num1, num2) {
-  // Formato do objeto a ser retornado:
-  // {
-  //   maiorNumero: X,
-  //   maiorDivisivelPorMenor: Y,
-  //   diferenca: Z
-  // }
+  
+  let numeroMaior
+  let numeroMenorOuIgual
+  
+    if(num1 > num2){
+        numeroMaior = num1
+        numeroMenorOuIgual = num2
+      } 
+        
+    else if (num2 > num1){
+        numeroMaior = num2
+        numeroMenorOuIgual = num1
+      } 
+     
+    else if (num1 === num2){
+         numeroMaior = num1
+         numeroMenorOuIgual = num2 
+      }
+
+  const resultadoDivisel = (numeroMaior % numeroMenorOuIgual === 0)
+  const resultadoDiferença = (numeroMaior - numeroMenorOuIgual)
+
+  const objetoVariasOperacoes = {
+      maiorNumero: numeroMaior,
+      maiorDivisivelPorMenor: resultadoDivisel,
+      diferenca: resultadoDiferença
+  }
+
+  return objetoVariasOperacoes
+
 }
 
 // EXERCÍCIO 10
