@@ -120,7 +120,22 @@ function comparaDoisNumeros(num1, num2) {
 
 // EXERCÍCIO 10
 function segundoMaiorEMenor(array) {
-  
+  let aux
+  let novoArray = []
+  for(let last = array.length -1; last > 0; last--){
+    for(let i = 0; i < last; i++){
+      if(array[i] > array[i+1]){
+        aux = array[i]
+        array[i] = array[i+1]
+        array[i+1] = aux
+      }
+    }     
+}
+
+  novoArray.push(array[array.length - 2])
+  novoArray.push(array[1])
+
+  return novoArray
 }
 
 // EXERCÍCIO 11
