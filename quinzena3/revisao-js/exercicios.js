@@ -119,10 +119,25 @@ function comparaDoisNumeros(num1, num2) {
 }
 
 // EXERCÍCIO 10
-function segundoMaiorEMenor(array) {}
+function segundoMaiorEMenor(array) {
+  
+}
 
 // EXERCÍCIO 11
-function ordenaArray(array) {}
+function ordenaArray(array) {
+  let aux
+  for(let last = array.length -1; last > 0; last--){
+    for(let i = 0; i < last; i++){
+      if(array[i] > array[i+1]){
+        aux = array[i]
+        array[i] = array[i+1]
+        array[i+1] = aux
+      }
+    }     
+}
+return array
+
+}
 
 // EXERCÍCIO 12
 function filmeFavorito() {}
