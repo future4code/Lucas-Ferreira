@@ -12,7 +12,7 @@ function inverteArray(array) {
   }
 
   return array
-  
+
 }
 
 // EXERCÍCIO 02
@@ -78,7 +78,11 @@ function retornaExpressoesBooleanas() {
 
 // EXERCÍCIO 07
 function retornaNNumerosPares(n) {
-
+  const arrayPares = []
+  for(i = 0; i < n ; i++){
+    arrayPares.push(i * 2)
+  }
+  return arrayPares
 }
 
 // EXERCÍCIO 08
