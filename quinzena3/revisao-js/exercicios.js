@@ -228,7 +228,14 @@ function maioresDe18(arrayDePessoas) {
 
 // EXERCÍCIO 16B
 function menoresDe18(arrayDePessoas) {
-  
+  const novoArray = arrayDePessoas.filter((elemento) => {
+    const naoAdultos = elemento.idade < 18 
+    if(naoAdultos){
+      return naoAdultos
+    }
+ })
+
+ return novoArray
  
 }
 
