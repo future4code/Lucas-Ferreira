@@ -302,7 +302,20 @@ function retornaPessoasNaoAutorizadas(pessoas) {
 }
 
 // EXERCÍCIO 19A
-function ordenaPorNome(consultasNome) {}
+function ordenaPorNome(consultasNome) {
+  const ordenado = consultasNome.sort(function(a,b){
+    if(a.nome > b.nome){
+      return 1
+    }
+    
+    if(a.nome < b.nome){
+      return -1
+    }
+  })
+   return ordenado
+}
+ 
+
 
 // EXERCÍCIO 19B
 function ordenaPorData(consultasData) {}
