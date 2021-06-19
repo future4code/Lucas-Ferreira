@@ -261,8 +261,20 @@ function multiplicaArrayPor2S(array) {
 
 // EXERCÍCIO 17C
 function verificaParidade(array) {
+  const novoArray = array.map((elemento) => {
+    const par = elemento % 2 === 0
+    const impar = elemento % 2 === 1
+    if(par){
+      return `${elemento} é par`
+    } if(impar){
+      return `${elemento} é ímpar`
+
+    }
+ })
+   return novoArray
+  }
  
-}
+
 
 // EXERCÍCIO 18A
 function retornaPessoasAutorizadas(pessoas) {
