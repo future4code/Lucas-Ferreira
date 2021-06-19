@@ -246,7 +246,16 @@ function retornaPessoasAutorizadas(pessoas) {
 }
 
 // EXERCÍCIO 18B
-function retornaPessoasNaoAutorizadas(pessoas) {}
+function retornaPessoasNaoAutorizadas(pessoas) {
+  const novoArray = pessoas.filter((elemento) => {
+    const permissao = elemento.altura >= 1.5 && (elemento.idade > 14 && elemento.idade < 60)
+    if(!permissao){
+      return !permissao
+    }
+ })
+
+ return novoArray
+}
 
 // EXERCÍCIO 19A
 function ordenaPorNome(consultasNome) {}
