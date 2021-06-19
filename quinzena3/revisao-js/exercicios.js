@@ -196,13 +196,26 @@ function anonimizaPessoa(pessoa) {
 }
 
 // EXERCÍCIO 16A
-function maioresDe18(arrayDePessoas) {}
+function maioresDe18(arrayDePessoas) {
+  
+  
+}
 
 // EXERCÍCIO 16B
-function menoresDe18(arrayDePessoas) {}
+function menoresDe18(arrayDePessoas) {
+  
+ 
+}
 
 // EXERCÍCIO 17A
-function multiplicaArrayPor2(array) {}
+function multiplicaArrayPor2(array) {
+  const novoArray = array.map((elemento) => {
+     const a = elemento * 2
+     return a
+  })
+
+  return novoArray
+}
 
 // EXERCÍCIO 17B
 function multiplicaArrayPor2S(array) {}
