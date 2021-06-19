@@ -1,5 +1,19 @@
 // EXERCÍCIO 01
-function inverteArray(array) {}
+function inverteArray(array) {
+  let aux
+  for(let last = array.length -1; last > 0; last--){
+    for(let i = 0; i < last; i++){
+      if(array[i] !== array[i+1]){
+        aux = array[i]
+        array[i] = array[i+1]
+        array[i+1] = aux
+      }
+    }
+  }
+
+  return array
+  
+}
 
 // EXERCÍCIO 02
 function retornaNumerosParesElevadosADois(array) {
