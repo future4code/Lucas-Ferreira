@@ -228,10 +228,22 @@ function multiplicaArrayPor2S(array) {
 }
 
 // EXERCÍCIO 17C
-function verificaParidade(array) {}
+function verificaParidade(array) {
+ 
+}
 
 // EXERCÍCIO 18A
-function retornaPessoasAutorizadas(pessoas) {}
+function retornaPessoasAutorizadas(pessoas) {
+  const novoArray = pessoas.filter((elemento) => {
+    const permissao = elemento.altura >= 1.5 && (elemento.idade > 14 && elemento.idade < 60)
+    if(permissao){
+      return permissao
+    }
+ })
+
+ return novoArray
+
+}
 
 // EXERCÍCIO 18B
 function retornaPessoasNaoAutorizadas(pessoas) {}
