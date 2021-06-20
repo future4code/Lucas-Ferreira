@@ -307,7 +307,7 @@ function ordenaPorNome(consultasNome) {
     if(a.nome > b.nome){
       return 1
     }
-    
+
     if(a.nome < b.nome){
       return -1
     }
@@ -318,7 +318,24 @@ function ordenaPorNome(consultasNome) {
 
 
 // EXERCÍCIO 19B
-function ordenaPorData(consultasData) {}
+function ordenaPorData(consultasData) {
+//  const novoArray = consultasData.map((elemento) =>{
+//    const timeStamp = new Date(elemento.dataDaConsulta).getTime
+//    return timeStamp
+//  })
+
+//  return novoArray
+}
 
 // EXERCÍCIO 20
-function calculaSaldo(contas) {}
+function calculaSaldo(contas) {
+    for(i = 0; i < contas.length ; i++){
+      let soma = 0
+      for(comprasRealizadas of contas[i].compras){
+        soma += comprasRealizadas
+      }
+      contas[i].saldoTotal = contas[i].saldoTotal - soma
+    }
+
+    return contas
+}
