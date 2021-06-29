@@ -1,0 +1,87 @@
+div{
+    margin-top: 20px;
+}
+
+.c-white-bc-gray{
+    color: white;
+    background-color: gray;
+
+}
+
+#bc-gold{
+    background-color: gold;
+    padding-left: 44px;
+    width: 10%;
+    margin-left: 600px;
+}
+
+.menu-mg{
+    margin-left: 500px;
+}
+
+.menu-item-mg{
+    margin-left: 40px;
+    color: black;
+    background-color: gold;
+    padding: 4px;
+}
+
+#recepcao-bc-gray{
+    background-color: gray;
+    color: white;
+    padding: 10px;
+}
+
+.th-bc-gray{
+    background-color: gray;
+    padding: 4px;
+}
+
+td{
+    background-color: rgb(194, 189, 189);
+    padding: 8px;
+
+}
+
+form{
+    background-color: grey;
+    width: 40%;
+    padding: 10px;
+   
+}
+
+.b-dinheiro{
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.b-cartao{
+    display: inline-block;
+    margin-top: 10px;
+}
+
+ul{
+    background-color: gray;
+    color: white;
+    padding: 8px;
+}
+
+.div-produto{
+    margin-top: 20px;
+    
+}
+
+button{
+    display: inline;
+}
+
+footer{
+    margin-top: 360px;
+    background-color: gold;
+    color: white;
+    padding: 10px;
+}
+.img-mg{
+    width: 100px;
+    margin-left: 10px;
+}
