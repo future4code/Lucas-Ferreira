@@ -30,7 +30,8 @@ img {
 }
 
 div>p:first-child {
-    display: inline;
+    display: inline-block;
+    margin-top: 50px
 }
 
 div img {
@@ -75,6 +76,7 @@ div img {
 
 #container-de-descricao>ol {
     padding: 15px 0px;
+    margin-top: 20px
 }
 
 #container-para-comprar {
