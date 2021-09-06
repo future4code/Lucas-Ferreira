@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+ <h2> ASTROMATCH </h2>
+    A ideia central deste projeto é aplicar conceitos
+    de Hooks (useState e useEffect) e integração com Api. Astromatch é um clone do Tinder.
+<hr>
+<br>
+<img src='image/astromatch 1.PNG'>
+<img src='image/astromatch 2.PNG'>
+<hr>
+<br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ <h2> Descrição do Projeto </h2>
 
-## Available Scripts
+     - Ao entrar no astromatch, o usuário deve ser capaz de ver uma opção de perfil para escolher. Devem ser mostrados a foto, o nome e a descrição dos perfis. Dois botões devem estar na tela: um que permita "dar match" (uma escolha "positiva") e o outro que permita descartar a sugestão (uma escolha "negativa"). Por fim, deve existir um botão que leve para a tela de matches.
 
-In the project directory, you can run:
+     - A tela perfis curtidos é constituída de uma lista de usuários que "deram match" com o usuário que estiver usando a nossa aplicação. Devem ser mostrados as fotos e os nomes dos perfis. 
 
-### `npm start`
+     - O usuário da nossa aplicação pode limpar as informações dos matches que deram a qualquer momento em qualquer tela do site. Para isso, deve haver um botão que fique bem claro que faz isso (com uma mensagem ou um ícone pertinente).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+     - Obs: No momento que você dá like na pessoa, a API "sorteia" se você deu match com aquela pessoa ou não. Se sim, ela adiciona aos matches e se não, tem que continuar dando like pra ganhar um match (a vida amorosa é dura 💔 ).
+<hr>
+<br>
+ <h2> Como acessar o projeto </h2>
+ <a href='https://tiresome-desire.surge.sh/' target='_blank'><b>- Link do surge </b></a>
+<hr>
+<br>
+ <h2> API utilizada </h2>
+<a href='https://documenter.getpostman.com/view/7549981/SW12yx56?version=latest' target='_blank'><b>- Link da Documentação API </b></a>
+<hr>
+<br>
+ <h2>Tecnologias utilizadas</h2>
+ <p> O projeto foi desenvolvido usando as seguintes tecnologias: </p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+     - React.js
+     - Styled-Components
+     - Axios
+     - Hooks
+<hr>
+<br>
 
-### `npm test`
+<p>Desenvolvido com dedicação por Lucas Veras.</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+     
