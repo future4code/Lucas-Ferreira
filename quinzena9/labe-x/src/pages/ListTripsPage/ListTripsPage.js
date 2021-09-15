@@ -69,13 +69,13 @@ background-color: white;
 border-radius: 4px;
 box-shadow: 5px 5px 5px rgba(102, 51, 153, 1);
 width: 70%;
-height: 185px;
 margin: 15px auto;
 `
 
 const P = styled.p`
 text-align: left;
-padding: 6px;
+margin-left: 8px;
+padding: 7px;
 font-size: 20px;
 color: rgba(102, 51, 153, 1);
 `
@@ -83,7 +83,7 @@ const H1 = styled.h1`
 color: white;
 `
 
-export function ListTripsPage(){
+export function ListTripsPage(props){
     const history = useHistory()
 
     const GoToHomePage = () => {
@@ -94,6 +94,9 @@ export function ListTripsPage(){
         history.push('/trips/application')
     }
 
+    console.log(props.trips)
+
+
     return (
         <>
          <ContainerListTripPage>
@@ -102,22 +105,15 @@ export function ListTripsPage(){
              <ButtonRegister onClick={GoToApplicationFormPage}>Increver-se</ButtonRegister>
              </ContainerButtons>
              <H1>Lista de Viagens</H1>
-             <ListItem>
-             <P><b>Nome:</b> Para China</P>
-             <P><b>Descrição:</b> Vamos para a China matar o Coronga!</P>
-             <P><b>Planeta:</b> Terra</P>
-             <P><b>Duração:</b> 50</P>
-             <P><b>Data:</b> 2021-09-30</P>
-             </ListItem>
-
-             <ListItem>
-             <P><b>Nome:</b> Para China</P>
-             <P><b>Descrição:</b> Vamos para a China matar o Coronga!</P>
-             <P><b>Planeta:</b> Terra</P>
-             <P><b>Duração:</b> 50</P>
-             <P><b>Data:</b> 2021-09-30</P>
-             </ListItem>
-
+             {props.trips.map((item)=>{
+                 return  <ListItem key={item.id}>
+                 <P><b>Nome:</b>&nbsp;{item.name}</P>
+                 <P><b>Descrição:</b>&nbsp; {item.description}</P>
+                 <P><b>Planeta:</b>&nbsp; {item.planet}</P>
+                 <P><b>Duração:</b>&nbsp; {item.durationInDays} dias</P>
+                 <P><b>Data:</b>&nbsp; {item.date}</P>
+                 </ListItem>
+             })}
          </ContainerListTripPage>
       
         </>

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
+import useProtectedPage  from '../../customHooks/useProtectedPage';
 
 
 const ContainerCreateTripPage = styled.div`
@@ -62,12 +63,6 @@ justify-content: center;
 
 `
 
-const P = styled.p`
-text-align: left;
-padding: 6px;
-font-size: 20px;
-color: rgba(102, 51, 153, 1);
-`
 
 const ButtonBack = styled.button`
 background-color: white;
@@ -109,6 +104,7 @@ font-family: Arial, Helvetica, sans-serif;
 
 
 export function CreateTripPage (){
+    useProtectedPage()
     const history = useHistory()
 
     const GoToAdminHomePage = () => {

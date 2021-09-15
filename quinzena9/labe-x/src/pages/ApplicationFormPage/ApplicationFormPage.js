@@ -62,12 +62,6 @@ justify-content: center;
 
 `
 
-const P = styled.p`
-text-align: left;
-padding: 6px;
-font-size: 20px;
-color: rgba(102, 51, 153, 1);
-`
 
 const ButtonBack = styled.button`
 background-color: white;
@@ -106,12 +100,16 @@ font-family: Arial, Helvetica, sans-serif;
 }
 `
 
-export function ApplicationFormPage(){
+export function ApplicationFormPage(props){
     const history = useHistory()
 
     const GoToListTripsPage = () => {
         history.push('/trips/list')
     }
+    
+   const TripsOptions = props.trips && props.trips.map((item) =>{
+       return <option key={item.id} value={item.id}> {item.name}</option>
+   })
 
     return (
         <>
@@ -120,8 +118,7 @@ export function ApplicationFormPage(){
             <h1>Inscreva-se para uma viagem Interstellar!</h1>
                 <Select>
                     <option  disabled selected >Escolha uma viagem</option>
-                    <option>Escolha uma viagem</option>
-                    <option>Escolha uma viagem</option>
+                    {TripsOptions}
                 </Select>
                 <Input placeholder='Digite o seu nome'/>
                 <Input placeholder='Digite sua idade'/>

@@ -1,6 +1,8 @@
-import React from "react";
+import React, {useState,useEffect} from 'react'
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
+import useProtectedPage  from '../../customHooks/useProtectedPage';
+import axios from 'axios'
 
 
 const ContainerTripDetailsPage = styled.div`
@@ -104,15 +106,34 @@ font-family: Arial, Helvetica, sans-serif;
 
 `
 
-export function TripDetailsPage (){
+export function TripDetailsPage (props){
+    const[trip, setTrip] = useState({})
+    
+    useProtectedPage()
+
     const history = useHistory()
 
     const GoToAdminHomePage = () => {
         history.push('/admin/trips/list')
     }
 
+    useEffect(() => {
+      const token = localStorage.getItem('token')
+      axios.get(`https://us-central1-labenu-apis.cloudfunctions.net/labeX/lucas-veras-ferreira/trip/${props.idTrips}`, 
+      {headers:
+        {auth:token} }
+    ).then((response)=>{
+          console.log('Detalhes, deu certo', response.data)
+      }).catch((error) =>{
+          console.log('deu erro', error.response)
+      })
+    },[]);
+   
+    console.log(props.idTrips)
+
     return(
         <>
+       
         <ContainerTripDetailsPage>
              <DetailsPage>
                  <div>

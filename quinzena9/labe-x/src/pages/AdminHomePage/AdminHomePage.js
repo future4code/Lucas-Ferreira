@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useState,useEffect} from 'react'
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
+import useProtectedPage  from '../../customHooks/useProtectedPage';
 
 
 const ContainerAdminHomePage = styled.div`
@@ -125,7 +126,9 @@ cursor: pointer;
 `
 
 
-export function AdminHomePage (){
+export function AdminHomePage (props){
+    useProtectedPage()
+
     const history = useHistory()
 
     const GoToLoginPage = () => {
@@ -140,10 +143,16 @@ export function AdminHomePage (){
         history.push('/login')
     }
 
-    const GoToTripDetailPage = () => {
-        history.push('/trips/:id')
+    const GoToTripDetailPage = (id) => {
+        history.push(`/trips/${id}`)
+        props.pegaId(id)
+        console.log('Olha eu aqui id', id)
+       
     }
 
+   useEffect(() => {
+        props.getTrips()
+   }, []);
 
 
 
@@ -156,14 +165,13 @@ export function AdminHomePage (){
                 <ButtonSubmit onClick={GoToCreatetripPage }>Criar viagem</ButtonSubmit>
                 <ButtonLogout onClick={Logout}>Logout</ButtonLogout>
             </ContainerButton>
-            <ListItem>
-                    <P onClick={GoToTripDetailPage}>Viagem para Marte</P>
-                    <ButtonRemove>Excluir</ButtonRemove>
-                </ListItem>
-            <ListItem>
-                    <P onClick={GoToTripDetailPage}>Viagem para Marte</P>
-                    <ButtonRemove>Excluir</ButtonRemove>
+            {props.trips.map((item)=>{
+                return  <ListItem key={item.id}>
+                <P onClick={()=> GoToTripDetailPage(item.id)}>{item.name}</P>
+                <ButtonRemove>Excluir</ButtonRemove>
             </ListItem>
+            })}
+           
         </ContainerAdminHomePage>
         </>
     )

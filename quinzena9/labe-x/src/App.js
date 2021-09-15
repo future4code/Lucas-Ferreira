@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import {HomePage} from './pages/HomePage/HomePage'
 import { Global } from './styles/global';
@@ -8,10 +8,31 @@ import {LoginPage} from './pages/LoginPage/LoginPage'
 import { AdminHomePage } from './pages/AdminHomePage/AdminHomePage';
 import {CreateTripPage} from  './pages/CreateTripPage/CreateTripPage'
 import {TripDetailsPage} from './pages/TripDetailsPage/TripDetailsPage'
+import axios from 'axios'
+
 
 
 
 function App() {
+  const [trips, setTrips] = useState([])
+  const [idTrips, setIdTrips] = useState('')
+  
+const getTrips = () =>{
+  axios.get('https://us-central1-labenu-apis.cloudfunctions.net/labeX/lucas-veras-johnson/trips').then((response) =>{
+    setTrips(response.data.trips)
+  }).catch((err) =>{
+  })
+}
+
+const pegaId = (id) =>{
+  setIdTrips(id)
+}
+
+useEffect(() => {
+  getTrips()
+ 
+}, []);
+
   return (
     
   <BrowserRouter>
@@ -23,12 +44,12 @@ function App() {
 
       <Route exact path={'/trips/list'}>
       <Global/>
-      <ListTripsPage/>
+      <ListTripsPage trips={trips}/>
       </Route>
 
       <Route exact path={'/trips/application'}>
       <Global/>
-      <ApplicationFormPage/>
+      <ApplicationFormPage trips={trips}/>
       </Route>
        
       <Route exact path={'/login'}>
@@ -38,7 +59,7 @@ function App() {
       
       <Route exact path={'/admin/trips/list'}>
       <Global/>
-      <AdminHomePage/>
+      <AdminHomePage getTrips={getTrips} trips={trips} pegaId={pegaId}/>
       </Route>
       
       <Route exact path={'/admin/trips/create'}>
@@ -48,7 +69,7 @@ function App() {
       
       <Route exact path={'/trips/:id'}>
       <Global/>
-      <TripDetailsPage/>
+      <TripDetailsPage idTrips={idTrips}/>
       </Route>
       
     </Switch>

@@ -1,6 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
+import axios from 'axios'
+
 
 const ContainerLoginPage = styled.div`
 background-image: url('https://cdn.pixabay.com/photo/2017/05/13/16/04/earth-2309897_960_720.png');
@@ -89,29 +91,53 @@ box-shadow: 0 0 1em rgba(102, 51, 153, 1);
 
 
 export function LoginPage () {
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+
     const history = useHistory()
 
     const GoToHomePage = () => {
         history.push('/')
     }
 
-    const GoToAdminHomePage = () => {
-        history.push('/admin/trips/list')
+
+    const onChangeEmail = (e) =>{
+      setEmail(e.target.value)
+
     }
+
+    const onChangePassword = (e) =>{
+        setPassword(e.target.value)
+    }
+
+    const onSubmitLogin = () =>{
+        console.log('Entrou')
+        const body = {
+            email: email,
+            password: password
+        }
+       axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labeX/lucas-veras-johnson/login', body).then((response) => {
+          console.log(response.data.token)
+           localStorage.setItem('token', response.data.token)
+           history.push('/admin/trips/list')
+       }).catch((error) => {
+           alert('Usuário não encontrado, tente novamente')
+       })
+    } 
 
     return(
         <>
         <ContainerLoginPage>
            <Form>
-               <Input placeholder='Email'></Input>
-               <Input placeholder='Senha'></Input>
-               <ContainerButton>
-               <ButtonBack onClick={GoToHomePage}>Voltar</ButtonBack>
-               <ButtonSubmit onClick={GoToAdminHomePage}>Entrar</ButtonSubmit>
-               </ContainerButton>
-               
+               <Input onChange={onChangeEmail} placeholder='Email' value={email} type='email'></Input>
+               <Input onChange={onChangePassword} placeholder='Senha'value={password} type='password'></Input>
            </Form>
-        </ContainerLoginPage>
+           <ContainerButton>
+               <ButtonBack onClick={GoToHomePage}>Voltar</ButtonBack>
+               <ButtonSubmit onClick={onSubmitLogin}>Entrar</ButtonSubmit>
+               </ContainerButton>
+          </ContainerLoginPage>
         </>
     )
 }
