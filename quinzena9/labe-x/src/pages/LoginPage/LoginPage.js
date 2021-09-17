@@ -1,7 +1,8 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 import axios from 'axios'
+import useForm from "../../hooks/useForm";
 
 
 const ContainerLoginPage = styled.div`
@@ -90,10 +91,11 @@ box-shadow: 0 0 1em rgba(102, 51, 153, 1);
 `
 
 
-export function LoginPage () {
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-
+export function LoginPage() {
+    const { form, onChange, clean } = useForm({
+        email: '',
+        password: '',
+    })
 
     const history = useHistory()
 
@@ -102,42 +104,60 @@ export function LoginPage () {
     }
 
 
-    const onChangeEmail = (e) =>{
-      setEmail(e.target.value)
 
-    }
+    const onRegister = (event) => {
+        event.preventDefault()
 
-    const onChangePassword = (e) =>{
-        setPassword(e.target.value)
-    }
-
-    const onSubmitLogin = () =>{
         console.log('Entrou')
+
         const body = {
-            email: email,
-            password: password
+            email: form.email,
+            password: form.password
         }
        axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labeX/lucas-veras-johnson/login', body).then((response) => {
-          console.log(response.data.token)
+          console.log('token', response.data.token)
            localStorage.setItem('token', response.data.token)
            history.push('/admin/trips/list')
        }).catch((error) => {
-           alert('Usuário não encontrado, tente novamente')
-       })
-    } 
+           alert('Usuário não encontrado, tente novamente.')
+       }) 
 
-    return(
+        clean()
+
+        console.log(form)
+
+    }
+
+    return (
         <>
-        <ContainerLoginPage>
-           <Form>
-               <Input onChange={onChangeEmail} placeholder='Email' value={email} type='email'></Input>
-               <Input onChange={onChangePassword} placeholder='Senha'value={password} type='password'></Input>
-           </Form>
-           <ContainerButton>
-               <ButtonBack onClick={GoToHomePage}>Voltar</ButtonBack>
-               <ButtonSubmit onClick={onSubmitLogin}>Entrar</ButtonSubmit>
-               </ContainerButton>
-          </ContainerLoginPage>
+            <ContainerLoginPage>
+                <Form onSubmit={onRegister}>
+                    <Input
+                        name={'email'}
+                        onChange={onChange}
+                        placeholder='Email'
+                        value={form.email}
+                        type='email'
+                        requerid
+                    ></Input>
+
+                    <Input
+                        name={'password'}
+                        onChange={onChange}
+                        placeholder='Senha'
+                        value={form.password}
+                        type='password'
+                        requerid
+                    ></Input>
+
+                    <ContainerButton>
+                        <ButtonBack onClick={GoToHomePage}>Voltar</ButtonBack>
+                        <ButtonSubmit>Entrar</ButtonSubmit>
+                    </ContainerButton>
+                </Form>
+
+
+            </ContainerLoginPage>
         </>
     )
 }

@@ -1,8 +1,9 @@
 import React, {useState,useEffect} from 'react'
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
-import useProtectedPage  from '../../customHooks/useProtectedPage';
+import useProtectedPage  from '../../hooks/useProtectedPage';
 import axios from 'axios'
+
 
 
 const ContainerTripDetailsPage = styled.div`
@@ -124,6 +125,7 @@ export function TripDetailsPage (props){
         {auth:token} }
     ).then((response)=>{
           console.log('Detalhes, deu certo', response.data)
+          console.log('token', token)
       }).catch((error) =>{
           console.log('deu erro', error.response)
       })

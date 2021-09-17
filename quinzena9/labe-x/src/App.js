@@ -16,6 +16,7 @@ import axios from 'axios'
 function App() {
   const [trips, setTrips] = useState([])
   const [idTrips, setIdTrips] = useState('')
+  const [subscription, setSubscription] = useState({})
   
 const getTrips = () =>{
   axios.get('https://us-central1-labenu-apis.cloudfunctions.net/labeX/lucas-veras-johnson/trips').then((response) =>{
@@ -24,7 +25,11 @@ const getTrips = () =>{
   })
 }
 
-const pegaId = (id) =>{
+const PostApplyTrip = () =>{
+  axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labeX/:aluno/trips/:id/apply')
+}
+
+const getId = (id) =>{
   setIdTrips(id)
 }
 
@@ -59,7 +64,7 @@ useEffect(() => {
       
       <Route exact path={'/admin/trips/list'}>
       <Global/>
-      <AdminHomePage getTrips={getTrips} trips={trips} pegaId={pegaId}/>
+      <AdminHomePage getTrips={getTrips} trips={trips} getId={getId}/>
       </Route>
       
       <Route exact path={'/admin/trips/create'}>
@@ -69,13 +74,10 @@ useEffect(() => {
       
       <Route exact path={'/trips/:id'}>
       <Global/>
-      <TripDetailsPage idTrips={idTrips}/>
+      <TripDetailsPage idTrips={idTrips} trips={trips}/>
       </Route>
       
     </Switch>
-  
-    
-   
 
   </BrowserRouter>
   );

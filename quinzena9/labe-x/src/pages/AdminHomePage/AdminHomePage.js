@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
-import useProtectedPage  from '../../customHooks/useProtectedPage';
+import useProtectedPage  from '../../hooks/useProtectedPage';
 
 
 const ContainerAdminHomePage = styled.div`
@@ -145,7 +145,7 @@ export function AdminHomePage (props){
 
     const GoToTripDetailPage = (id) => {
         history.push(`/trips/${id}`)
-        props.pegaId(id)
+        props.getId(id)
         console.log('Olha eu aqui id', id)
        
     }
