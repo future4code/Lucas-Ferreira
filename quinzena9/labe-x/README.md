@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+ <h1> LabeX </h1>
+    Labex é um site de viagens planetárias onde o usuário pode se candidatar a viagens para outros planetas. Os conceitos principais
+    que foram aplicados para aprendizagem, foram: Custom Hooks, Autenticação de usuário, formulários no React e integração com a API LabeX.
+<hr>
+<br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ <h2> Descrição do Projeto </h2>
 
-## Available Scripts
+     - Ao entrar no LabeX, o usuário terá uma Home com dois caminhos:
+         1) Página com a lista de viagens
+         2) Área administrativa (o usuário deverá se autenticar para acessar as páginas privadas).
 
-In the project directory, you can run:
+     - Na página de lista de viagens o usuário verá a lista de viagens que estão disponíveis para o mesmo se inscrever, ele pode fazer sua inscrição através de um formulário que ele tem acesso após clicar no botão de 'inscrever'.
 
-### `npm start`
+     - Para acessar a área administrativa o usuário deverá logar-se. Nessa área administrativa ele poderá excluir as viagens já cadastradas,ver os detalhes da viagem e os canditados que se increveram naquela viagem, com a possibilidade de aprovar ou reprovar o mesmo candidato. Além de conseguir criar uma viagem que ficará disponíveis para inscrição.
+     
+<hr>
+<br>
+ <h2> Como acessar o projeto </h2>
+ <a href='https://delicate-pen.surge.sh/' target='_blank'><b>- Link do surge </b></a>
+<hr>
+<br>
+<h2> Credencias para acessar telas privadas </h2>
+    
+    - Usuário: lucasdev@gmail.com.br
+    - Senha: 123456
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    - Usuário: astrodev@gmail.com.br
+    - Senha: 123456
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<hr>
+<br>
+ <h2> API utilizada </h2>
+<a href='https://documenter.getpostman.com/view/9133542/TzCTZkQr' target='_blank'><b>- Link da Documentação API </b></a>
+<hr>
+<br>
+ <h2>Tecnologias utilizadas</h2>
+ <p> O projeto foi desenvolvido usando as seguintes tecnologias: </p>
 
-### `npm test`
+     - React.js
+     - Styled-Components
+     - Axios
+     - Hooks/ Custom Hooks
+     - SweetALert
+<hr>
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h2> Como baixar o projeto </h2>
 
-### `npm run build`
+    # Clonar Repositório
+      git clone https://github.com/future4code/Lucas-Ferreira.git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    # Entrar no diretório
+      cd quinzena9
+      cd labe-x
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    # Instalar dependências
+      npm install
+      npm install styled-components
+      npm install axios
+      npm install sweetalert
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    # Rodar o projeto
+      npm run start
+     
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<p>Desenvolvido com dedicação por Lucas Veras.</p>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+     
