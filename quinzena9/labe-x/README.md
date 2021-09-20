@@ -24,7 +24,7 @@
     
     - Usuário: lucasdev@gmail.com.br
     - Senha: 123456
-
+    
     - Usuário: astrodev@gmail.com.br
     - Senha: 123456
 
@@ -66,7 +66,7 @@
 
 
 
-<p>Desenvolvido com dedicação por Lucas Veras.</p>
+<p>Projeto desenvolvido com dedicação por Lucas Veras.</p>
 
 
 
